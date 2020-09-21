@@ -2,3 +2,5 @@ old_scripts/
 smdt_rhythm_notes.txt
 smdt_rhythm_lastrun.py
 smdt_rhythm.py
+__pycache__
+data/
