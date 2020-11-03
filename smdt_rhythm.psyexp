@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.5">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -130,7 +130,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="9999" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
@@ -154,7 +154,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="9999" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
@@ -170,7 +170,7 @@
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="second_rhythm_start = rhythm_first_time+0.9&amp;#10;mouse_start = second_rhythm_start+rhythm_second_time&amp;#10;rhythm_rect_same.fillColor = [0, 0, 0]&amp;#10;rhythm_rect_different.fillColor = [0, 0, 0]&amp;#10;grey_colors = True&amp;#10;&amp;#10;# check if 1st and 2nd rhythm .wav are the same&amp;#10;if rhythm_first == rhythm_second:&amp;#10;    correct_rect_name = rhythm_rect_same.name&amp;#10;    same_rhythm = 1&amp;#10;else:&amp;#10;    correct_rect_name = rhythm_rect_different.name&amp;#10;    same_rhythm = 0&amp;#10;&amp;#10;# get trial start time, for export to .csv file&amp;#10;trial_start_time = tThisFlipGlobal + 0" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Py" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="# if second rhythm starts now and rectangles are still in grey&amp;#10;if tThisFlip &gt;= second_rhythm_start-frameTolerance and grey_colors:&amp;#10;    rhythm_rect_same.fillColor = SAME_COLOR&amp;#10;    rhythm_rect_different.fillColor = DIFFERENT_COLOR&amp;#10;    grey_colors = False&amp;#10;&amp;#10;# if mouse/instruction should start now and mouse isn't already started&amp;#10;if tThisFlip &gt;= mouse_start-frameTolerance and mouse_trial.status != STARTED:&amp;#10;    mouse_trial.status = STARTED&amp;#10;    text_trial_instruction.setAutoDraw(True)&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="# if second rhythm starts now and rectangles are still in grey&amp;#10;if tThisFlip &gt;= second_rhythm_start-frameTolerance and grey_colors:&amp;#10;    rhythm_rect_same.fillColor = SAME_COLOR&amp;#10;    rhythm_rect_different.fillColor = DIFFERENT_COLOR&amp;#10;    grey_colors = False&amp;#10;&amp;#10;# if mouse/instruction should start now and mouse isn't already started&amp;#10;if tThisFlip &gt;= mouse_start-frameTolerance and mouse_trial.status != STARTED:&amp;#10;    mouse_trial.status = STARTED&amp;#10;    text_trial_instruction.setAutoDraw(True)&amp;#10;    text_trial_same.setAutoDraw(True)&amp;#10;    text_trial_different.setAutoDraw(True)&amp;#10;" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -458,54 +458,6 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
       </PolygonComponent>
-      <TextComponent name="text_same_inter_grey">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="1.4" valType="code"/>
-        <Param name="name" updates="None" val="text_same_inter_grey" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(8, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Samma" valType="str"/>
-        <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-      <TextComponent name="text_different_inter_grey">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="1.4" valType="code"/>
-        <Param name="name" updates="None" val="text_different_inter_grey" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-8, 0.0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Olika" valType="str"/>
-        <Param name="units" updates="None" val="deg" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
     </Routine>
     <Routine name="end_screen">
       <TextComponent name="text_end">
@@ -533,9 +485,11 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
+    <Routine name="blank_500ms"/>
   </Routines>
   <Flow>
     <Routine name="instructions"/>
+    <Routine name="inter_trial_grey"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
